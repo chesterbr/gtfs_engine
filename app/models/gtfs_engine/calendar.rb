@@ -10,7 +10,7 @@ module GtfsEngine
     has_many :routes, through: :trips
     has_many :shapes, through: :trips
 
-    alias_attribute :dates, :calendar_dates
+    alias_method :dates, :calendar_dates
 
     class << self
       # @return <ActiveRecord_Relation> the set of Calendars that include the
